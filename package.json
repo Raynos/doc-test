@@ -33,6 +33,9 @@
       "url": "http://github.com/Raynos/doc-test/raw/master/LICENSE"
     }
   ],
+  "bin": {
+    "doc-test": "./bin/doc-test.js"
+  },
   "scripts": {
     "test": "tap --stderr --tap ./test"
   }
