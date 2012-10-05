@@ -1,10 +1,11 @@
 #! /usr/bin/env node
 
 var pathToRun = process.argv[2]
+    , path = require("path")
     , iterateFiles = require("iterate-files")
 
-iterateFiles(pathToRun, function (fileName) {
+iterateFiles(path.join(process.cwd(), pathToRun), function (fileName) {
     require(fileName)
-}, function () {
-    console.log("all done!")
-}, /\.js$/)
+}, noop, /\.js$/)
+
+function noop() {}
