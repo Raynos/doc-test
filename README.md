@@ -6,7 +6,7 @@ Examples are tests!
 
 Imagine we are writing tests/examples for [ready-signal][1]
 
-```
+``` js
 var Signal = require("ready-signal")
     , log = require("doc-test")(__filename)
 
