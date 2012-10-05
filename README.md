@@ -85,6 +85,10 @@ This is your test, example and documentation
 
 This will basically just run node on every file.
 
+You can also run the entire file in a REPL
+
+`doc-test <relative file> --repl`
+
 ## Inspiration
 
  - [doctest.js](https://github.com/ianb/doctestjs)
