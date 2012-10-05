@@ -12,24 +12,42 @@ log("1", typeof Signal)
     And it will be called
 */
 
-var r = Signal()
-r(function callback () {
+var r1 = Signal()
+r1(function callback () {
     log("2", true)
     // true
 })
 
-r()
+r1()
 
 /*
     It also calls your listener if you add it
     after the signal is ready
 */
 
-var r = Signal()
+var r2 = Signal()
 
-r()
+r2()
 
-r(function callback() {
+r2(function callback() {
     log("3", true)
+    // true
+})
+
+/*
+    Multiple callbacks will also fire!
+*/
+
+var r3 = Signal()
+
+r3(function callback() {
+    log("4", true)
+    // true
+})
+
+r3()
+
+r3(function callback() {
+    log("5", true)
     // true
 })

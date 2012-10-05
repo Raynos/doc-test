@@ -42,6 +42,24 @@ r(function callback() {
     log("3", true)
     // true
 })
+
+/*
+    Multiple callbacks will also fire!
+*/
+
+var r = Signal()
+
+r(function callback() {
+    log("4", true)
+    // true
+})
+
+r()
+
+r(function callback() {
+    log("5", true)
+    // true
+})
 ```
 
 Now just run `node file.js` and it should print
@@ -50,6 +68,8 @@ Now just run `node file.js` and it should print
 1 function
 2 true
 3 true
+4 true
+5 true
 ```
 
 What it's doing is matching every log call with the value
