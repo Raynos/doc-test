@@ -57,6 +57,14 @@ descriped in the comment below it. That's it.
 
 This is your test, example and documentation
 
+## CLI Usage
+
+`npm install doc-test -g`
+
+`doc-test <relative folder>`
+
+This will basically just run node on every file.
+
 ## Inspiration
 
  - [doctest.js](https://github.com/ianb/doctestjs)
